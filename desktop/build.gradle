@@ -25,6 +25,10 @@ task debug(dependsOn: classes, type: JavaExec) {
 }
 
 task dist(type: Jar) {
+
+    // This baseName will be used by gradle to name the output .jar
+    baseName 'bye-world'
+
     manifest {
         attributes 'Main-Class': project.mainClassName
     }
